@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villademar2024</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <span class="button-like-text" onclick="scrollToSection(1)">Villademar2024</span>
+    </header>
+    <div class="container">
+        <div class="section" id="section1">
+            <div class="title-container">
+                <h1>Sección 1</h1>
+            </div>
+            <div class="info-container">
+                <div class="column">
+                    <p>Fecha: 21 de mayo de 2024</p>
+                </div>
+                <div class="column">
+                    <p>Lugar: Villademar</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="persButton" onclick="scrollToSection(1)">Ir Sección 1</button>
+                <button class="persButton" onclick="scrollToSection(2)">Ir Sección 2</button>
+                <button class="persButton" onclick="scrollToSection(3)">Ir Sección 3</button>
+                <button class="persButton" onclick="scrollToSection(4)">Ir Sección 4</button>
+            </div>
+            <a href="#section2" class="scroll-down-arrow">+info &darr;</a>
+        </div>
+        
+        <div class="section" id="section2">
+            <h1>Sección 2</h1>
+            <div class="options-container">
+                <div class="option" onclick="">
+                    <h2>Opción A</h2>
+                </div>
+                <div class="option" onclick="">
+                    <h2>Opción B</h2>
+                </div>
+            </div>
+            <a href="#section3" class="scroll-down-arrow">+info &darr;</a>
+        </div>
+        
+        <div class="section" id="section3">
+            <h1>Sección 3</h1>
+            <a href="#section4" class="scroll-down-arrow">+info &darr;</a>
+        </div>
+        <div class="section" id="section4">
+            <h1>Sección 4</h1>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+    <script>
+        function scrollToSection(sectionNumber) {
+            const section = document.getElementById(`section${sectionNumber}`);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

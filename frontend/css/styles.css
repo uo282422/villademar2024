@@ -1,0 +1,181 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.button-like-text {
+    cursor: pointer;
+    color: inherit;
+}
+
+.container {
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    transition: background-color 0.5s;
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.section > * {
+    position: relative;
+    z-index: 2;
+}
+
+#section1 {
+    background-image: url('/resources/images/globos.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#section1 .title-container {
+    margin-bottom: 20px;
+}
+
+#section2 {
+    background-image: url('/resources/images/entradas.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.option {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 6em; /* Aumenta el padding para separarlo del borde */
+    margin: 4em; /* Aumenta el margen para separarlo de las otras opciones */
+    flex: 1;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.option h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+}
+
+#section3 {
+    background-image: url('/resources/images/autobuses.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#section4 {
+    background-image: url('/resources/images/beerpong.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+.button-container button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.persButton {
+    --color: #ffa260;
+    --hover: #e5ff60;
+}
+
+.persButton:hover,
+.persButton:focus {
+    box-shadow: 0 0.5em 0.5em -0.2em var(--hover);
+    transform: translateY(-0.5em);
+}
+
+button {
+    background: none;
+    border: 2px solid;
+    color: white;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    border-radius: 10px;
+}
+
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.scroll-down-arrow:hover {
+    color: #eee;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6em;
+    color: white;
+    font-size: medium;
+}
+
+.column {
+    width: 35%;
+}

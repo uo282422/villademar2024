@@ -1,0 +1,275 @@
+/****************OP1 BLOQUES***********************************************/
+/*
+<div class="presentation-blocks">
+                <div class="block">
+                    <h2>¿Qué es?</h2>
+                    <p>La primera edición de la mayor fiesta del agua de España. Habrá lona deslizante, pistolillas de agua, DJ’s, beerpong, ruleta, foodtrucks...</p>
+                </div>
+                <div class="block">
+                    <h2>¿Dónde va a ser?</h2>
+                    <p>En la finca de enfrente del campo de fútbol de La Roja en Villademar, Cudillero</p>
+                    <img src="/resources/images/location.png" alt="Ubicación">
+                </div>
+                <div class="block">
+                    <h2>¿Cómo llegar?</h2>
+                    <p>4 Líneas de Bus (+ Info abajo)</p>
+                    <p>Coche: Salida 431 desde la A8 (Cudillero)</p>
+                    <p>(Tren?)</p>
+                </div>
+                <div class="block">
+                    <h2>¿A qué hora empieza?</h2>
+                    <p>Horario oficial: de 12 del mediodía a 8 de la tarde</p>
+                    <p>Horario after: de 8 de la tarde a 2 de la madrugada</p>
+                </div>
+                <div class="block">
+                    <h2>¿Qué artistas va a haber?</h2>
+                    <p>Line-up de DJ’s y artistas</p>
+                </div>
+                <div class="block">
+                    <h2>¿Precios de la barra?</h2>
+                    <p>El evento contará con precios económicos en todos los productos.</p>
+                </div>
+            </div>
+
+.presentation-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.block {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.block img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+*/
+
+/****************OP2 acordeon***********************************************/
+/*
+<div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-button">¿Qué es?</button>
+                    <div class="accordion-content">
+                        <p>La primera edición de la mayor fiesta del agua de España. Habrá lona deslizante, pistolillas de agua, DJ’s, beerpong, ruleta, foodtrucks...</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">¿Dónde va a ser?</button>
+                    <div class="accordion-content">
+                        <p>En la finca de enfrente del campo de fútbol de La Roja en Villademar, Cudillero</p>
+                        <img src="/resources/images/location.png" alt="Ubicación">
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">¿Cómo llegar?</button>
+                    <div class="accordion-content">
+                        <p>4 Líneas de Bus (+ Info abajo)</p>
+                        <p>Coche: Salida 431 desde la A8 (Cudillero)</p>
+                        <p>(Tren?)</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">¿A qué hora empieza?</button>
+                    <div class="accordion-content">
+                        <p>Horario oficial: de 12 del mediodía a 8 de la tarde</p>
+                        <p>Horario after: de 8 de la tarde a 2 de la madrugada</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">¿Qué artistas va a haber?</button>
+                    <div class="accordion-content">
+                        <p>Line-up de DJ’s y artistas</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">¿Precios de la barra?</button>
+                    <div class="accordion-content">
+                        <p>El evento contará con precios económicos en todos los productos.</p>
+                    </div>
+                </div>
+            </div>
+
+.accordion {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.accordion-button:focus {
+    outline: none;
+}
+
+.accordion-content {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.accordion-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.accordion-button.active + .accordion-content {
+    display: block;
+}
+*/
+
+
+/****************OP2 CARRUSEL***********************************************/
+/*
+ <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <h2>¿Qué es?</h2>
+                        <p>La primera edición de la mayor fiesta del agua de España. Habrá lona deslizante, pistolillas de agua, DJ’s, beerpong, ruleta, foodtrucks...</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h2>¿Dónde va a ser?</h2>
+                        <p>En la finca de enfrente del campo de fútbol de La Roja en Villademar, Cudillero</p>
+                        <img src="/resources/images/location.png" alt="Ubicación">
+                    </div>
+                    <div class="carousel-slide">
+                        <h2>¿Cómo llegar?</h2>
+                        <p>4 Líneas de Bus (+ Info abajo)</p>
+                        <p>Coche: Salida 431 desde la A8 (Cudillero)</p>
+                        <p>(Tren?)</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h2>¿A qué hora empieza?</h2>
+                        <p>Horario oficial: de 12 del mediodía a 8 de la tarde</p>
+                        <p>Horario after: de 8 de la tarde a 2 de la madrugada</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h2>¿Qué artistas va a haber?</h2>
+                        <p>Line-up de DJ’s y artistas</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h2>¿Precios de la barra?</h2>
+                        <p>El evento contará con precios económicos en todos los productos.</p>
+                    </div>
+                </div>
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+*/
+
+
+
+/************OP2 ACORDEON***************** */
+/*
+document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+        button.classList.toggle('active');
+        const content = button.nextElementSibling;
+        if (button.classList.contains('active')) {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    });
+});*/
+
+
+/************OP3 CARRUSEL***************** */
+/*
+let slideIndex = 0;
+
+function moveSlide(n) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    slideIndex += n;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    const carouselContainer = document.querySelector('.carousel-container');
+    carouselContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+}
+*/

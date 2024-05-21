@@ -1,0 +1,297 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 0; /* Elimina el relleno horizontal y aplica solo vertical */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.button-like-text {
+    cursor: pointer;
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Usa el ancho completo del header */
+}
+
+.button-like-text .logo {
+    width: 100px; /* Ajusta el ancho del logo según sea necesario */
+    height: auto;
+}
+.container {
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    transition: background-color 0.5s;
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.section > * {
+    position: relative;
+    z-index: 2;
+}
+
+#section1 {
+    background-image: url('/resources/images/cudi1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#section2 {
+    background-image: url('/resources/images/cudi2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#section1 .title-container {
+    margin-bottom: 20px;
+}
+
+#section3 {
+    background-image: url('/resources/images/entradas.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-container {
+    width: 80%; /* Establece el ancho del contenedor de opciones */
+    margin: 20px auto; /* Centra horizontalmente y agrega margen superior e inferior */
+    display: grid; /* Utiliza grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas de igual ancho */
+    grid-template-rows: auto; /* Ajusta la altura según el contenido */
+    gap: 20px; /* Espacio entre las opciones */
+}
+
+.option {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px; /* Ajusta el padding */
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: auto; /* Ajusta la altura según el contenido */
+}
+
+.op1 { grid-area: op1; } /* Asigna el área op1 al elemento con clase op1 */
+.op2 { grid-area: op2; } /* Asigna el área op2 al elemento con clase op2 */
+.op3 { grid-area: op3; } /* Asigna el área op3 al elemento con clase op3 */
+.op4 { grid-area: op4; } /* Asigna el área op4 al elemento con clase op4 */
+
+
+
+.option:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.option h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+}
+
+.description {
+    text-align: center; /* Asegura que el contenedor de la imagen esté centrado */
+}
+
+.description img {
+    display: block;
+    width: 100px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    margin: 0 auto 10px auto; /* Centra la imagen y añade espacio inferior */
+}
+
+.description ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.description ul li {
+    margin-bottom: 5px;
+}
+
+.price {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+#section4 {
+    background-image: url('/resources/images/autobuses.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#section5 {
+    background-image: url('/resources/images/beerpong.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.button-container button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+
+.persButton:hover,
+.persButton:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+.persButton {
+    --color: #e4cb58;
+    --hover: #6cd4ebbc;
+  }
+button {
+    background: none;
+    border: 2px solid;
+    color: white;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    border-radius: 10px;
+   
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+}
+
+
+.downButton {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.downButton:hover {
+    color: #eee;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em; /* Ajusta este valor según tu preferencia */
+    margin-right: 2em; /* Ajusta este valor según tu preferencia */
+}
+
+.column i {
+    margin-right: 0.5em; /* Ajusta este valor según tu preferencia */
+    margin-bottom: 1em; /* Ajusta este valor según tu preferencia */
+}
+
+
+.option {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px; /* Ajusta el padding */
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: auto; /* Ajusta la altura según el contenido */
+}
+/*TARJETAS*/
+
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Se adapta al ancho del contenedor padre */
+    max-width: 30rem; /* Establece un ancho máximo para evitar que se estire demasiado */
+    border: 0.1rem solid lightgray;
+    box-shadow: 0.2rem 0.2rem 0.8rem 0.4rem rgba(211, 211, 211, 0.7);
+    border-radius: 1rem;
+    font-family: sans-serif;
+    height: auto; /* Ajusta la altura según el contenido */
+    margin: 1rem; /* Añade un margen alrededor de la tarjeta */
+  }
+  .tarjeta:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tarjeta h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+}
+  
+  .titulo {
+    font-size: 1.5rem;
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  .cuerpo {
+    padding: 1rem;
+    flex: 1 1 auto; /* Permite que el cuerpo crezca y se ajuste dentro del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cuerpo img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0.5rem; /* Añade un borde redondeado a la imagen */
+  }
+  
+  
+  

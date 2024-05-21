@@ -156,7 +156,7 @@ button {
 }
 .options-container {
     width: 80%; /* Establece el ancho del contenedor de opciones */
-    margin: 5em auto; /* Centra horizontalmente y agrega margen superior e inferior */
+    margin: 20px auto; /* Centra horizontalmente y agrega margen superior e inferior */
     display: grid; /* Utiliza grid layout */
     grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas de igual ancho */
     grid-template-rows: auto; /* Ajusta la altura según el contenido */
@@ -204,5 +204,3 @@ button {
     height: auto;
     border-radius: 0.5rem;
 }
-
-

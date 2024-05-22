@@ -1,4 +1,19 @@
+window.addEventListener('resize', function() {
+    // Obtener el tamaño actual de la ventana del navegador
+    let windowWidth = window.innerWidth;
+    let windowHeight = window.innerHeight;
+
+    // Verificar si el tamaño es menor que el mínimo deseado
+    if (windowWidth < 753 || windowHeight < 584) {
+        // Establecer el tamaño mínimo
+        window.resizeTo(753, 584);
+    }
+});
 document.addEventListener('DOMContentLoaded', () => {
+
+    const carrito = new Carrito();
+
+
     const container = document.querySelector('.container');
 
     container.addEventListener('scroll', () => {
@@ -41,7 +56,4 @@ function scrollToSection(sectionNumber) {
     const section = document.getElementById(`section${sectionNumber}`);
     section.scrollIntoView({ behavior: 'smooth' });
 }
-
-
-
 

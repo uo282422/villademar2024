@@ -57,3 +57,4 @@ function scrollToSection(sectionNumber) {
     section.scrollIntoView({ behavior: 'smooth' });
 }
 
+

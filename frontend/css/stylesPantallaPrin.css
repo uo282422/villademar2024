@@ -1,0 +1,91 @@
+/* PANTALLA PRIN */
+.column {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    margin-right: 2em;
+}
+
+.column i {
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative; /* Añade posición relativa para el posicionamiento absoluto del contenedor del botón */
+}
+
+button {
+    background: none;
+    border: 2px solid;
+    color: white;
+    font: inherit;
+    line-height: 1;
+    padding: 1em ;
+    border-radius: 10px;
+    transition: 0.7s;
+    
+}
+.fold-button {
+    width: 100%;
+    max-width: none; /* Asegura que el ancho se extienda completamente */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+}
+.fold-buttonMain {
+    background: none;
+    border: 2px solid;
+    color: white;
+    font: inherit;
+    padding: 0.5em 2em; /* Ajusta el padding para reducir la altura del botón */
+    border-radius: 10px;
+    transition: 0.7s;
+    position: absolute;
+    bottom: 0; /* Alinea el botón al borde inferior */
+    left: 50%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    margin-bottom: 1em;
+    width: 90%;
+    max-width: none; /* Asegura que el ancho se extienda completamente */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+}
+
+/*
+.button-container {
+    position: absolute;
+    bottom: 0; /* Posiciona el contenedor del botón en la parte inferior 
+    left: 50%; /* Centra el contenedor horizontalmente 
+    transform: translateX(-50%); /* Centra el contenedor horizontalmente 
+}
+.downButton {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.downButton:hover {
+    color: #eee;
+}
+.button-container button,
+.downButton {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.persButton:hover,
+.persButton:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.persButton {
+    --color: #e4cb58;
+    --hover: #6cd4ebbc;
+}*/

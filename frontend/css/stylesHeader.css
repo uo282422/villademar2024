@@ -1,0 +1,39 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0 20px; /* Ajuste del padding para que el contenido no se pegue a los bordes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Centra el contenido principal horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/*LOGO-BOTÓN*/
+.button-like-text {
+    pointer-events: auto; /* Habilita los clics solo en este elemento */
+    cursor: pointer; /* Añade el cursor de puntero */
+    position: absolute; /* Permite el posicionamiento absoluto */
+    left: 50%; /* Posiciona el centro del logo en el 50% */
+    transform: translateX(-50%); /* Centra el logo */
+}
+
+.logo {
+    max-height: 50px; /* Ajusta según tu diseño */
+    height: auto;
+}
+
+/*CARRITO*/
+.cart-icon {
+    font-size: 24px; /* Tamaño del icono */
+    color: #fff; /* Color claro */
+    cursor: pointer;
+    position: absolute; /* Permite el posicionamiento absoluto */
+    right: 2em; /* Separa el icono del borde derecho */
+    pointer-events: auto; /* Habilita los clics solo en este elemento */
+}

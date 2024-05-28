@@ -6,48 +6,10 @@ html, body {
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
-img{
+img {
     width: 100%;
-  height: auto;
-}
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 0 20px; /* Ajuste del padding para que el contenido no se pegue a los bordes */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: center; /* Centra el contenido principal horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos */
-}
-
-.button-like-text {
-    pointer-events: auto; /* Habilita los clics solo en este elemento */
-    cursor: pointer; /* Añade el cursor de puntero */
-    position: absolute; /* Permite el posicionamiento absoluto */
-    left: 50%; /* Posiciona el centro del logo en el 50% */
-    transform: translateX(-50%); /* Centra el logo */
-}
-
-.logo {
-    max-height: 50px; /* Ajusta según tu diseño */
     height: auto;
 }
-
-.cart-icon {
-    font-size: 24px; /* Tamaño del icono */
-    color: #fff; /* Color claro */
-    cursor: pointer;
-    position: absolute; /* Permite el posicionamiento absoluto */
-    right: 2em; /* Separa el icono del borde derecho */
-    pointer-events: auto; /* Habilita los clics solo en este elemento */
-}
-
 
 
 .container {
@@ -56,9 +18,10 @@ img{
     height: 100vh;
 }
 
+/*AJUSTES DE LAS SECCIONES EN GENERAL*/
 .section {
     min-height: 100vh; /* Ocupa al menos la altura de la ventana */
-    display: flex;
+    display: none; /* Ocultar todas las secciones inicialmente */
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
@@ -84,91 +47,156 @@ img{
     z-index: 2;
 }
 
-#section1, #section2, #section3, #section4, #section5 {
+#mainPage, #buttonPage, #carrPage, #slide0, #slide1,#slide2,#slide3 {
     background-size: cover;
     background-position: center;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
-#section1 {
+/*PAGINAS PRINCIPALES*/
+#mainPage {
+    display: flex; 
     background-image: url('/resources/images/cudi1.png');
 }
 
-#section2 {
+#buttonPage {
+    display: flex; 
+    padding: 0%;
     background-image: url('/resources/images/cudi2.png');
 }
 
-#section3 {
-    background-image: url('/resources/images/entradas.png');
+#carrPage {
+   /*display: flex; */
+   
 }
 
-#section4 {
-    background-image: url('/resources/images/bus.png');
+#slide0 {/*Info*/
+    background-image: url('/resources/images/liso0.png');
 }
 
-#section5 {
-    background-image: url('/resources/images/beer.png');
+#slide1 {/*Entradas*/
+    background-image: url('/resources/images/liso1.png');
+}
+#slide2 {/*Beerpong*/
+    background-image: url('/resources/images/liso2.png');
+}
+#slide3 {/*Autobuses*/
+    background-image: url('/resources/images/liso3.png');
 }
 
-.button-container button, .downButton {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-}
 
-.persButton:hover,
-.persButton:focus {
-  box-shadow: inset 0 -3.25em 0 0 var(--hover);
-}
 
-.persButton {
-    --color: #e4cb58;
-    --hover: #6cd4ebbc;
-}
 
-button {
-    background: none;
-    border: 2px solid;
-    color: white;
-    font: inherit;
-    line-height: 1;
-    padding: 1em 2em;
-    border-radius: 10px;
-    transition: 0.7s;
-}
 
-.downButton {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1em;
-    color: #fff;
-    text-decoration: none;
-}
-
-.downButton:hover {
-    color: #eee;
-}
-
-.info-container {
+.button-vertical-container {
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
-    color: white;
+    height: 100%;
+    width: 100%;
+    
 }
 
-.column {
+.colorButton {
+    flex: 1;
+    border: none;
+    color: BLACK;
+    font-size: 1.2em;
+    cursor: pointer;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 0.5em;
-    margin-right: 2em;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
-.column i {
-    margin-right: 0.5em;
+.colorButton:hover {
+    opacity: 0.8;
+}
+#button1,#button2,#button3,#button4{
+    margin-top:1em;
     margin-bottom: 1em;
 }
+
+#button1 {
+    background-image: url('/resources/images/fondo0.png');
+}
+
+#button2 {
+    background-image: url('/resources/images/fondo1.png');
+}
+
+#button3 {
+    background-image: url('/resources/images/fondo2.png');
+}
+
+#button4 {
+    background-image: url('/resources/images/fondo3.png');
+}
+
+
+
+.carousel {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    text-align: center;
+}
+
+
+
+.carousel-item h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0.5em;;
+}
+
+.carousel-control.prev {
+    left: 0.5em;
+}
+
+.carousel-control.next {
+    right: 0.5em;
+}
+
+
+.carousel-item h1 {
+   
+}
+
+
+
+

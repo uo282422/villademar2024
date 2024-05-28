@@ -1,8 +1,7 @@
 .options-container {
-    /*width: 80%;  Establece el ancho del contenedor de opciones */
     margin: 5em auto; /* Centra horizontalmente y agrega margen superior e inferior */
     display: grid; /* Utiliza grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas de igual ancho */
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas */
     grid-template-rows: auto; /* Ajusta la altura según el contenido */
     gap: 20px; /* Espacio entre las opciones */
 }
@@ -12,12 +11,24 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    max-width: 30rem;
     border: 0.1rem solid lightgray;
     box-shadow: 0.2rem 0.2rem 0.8rem 0.4rem rgba(211, 211, 211, 0.7);
     border-radius: 1rem;
     font-family: sans-serif;
-    margin: 1rem;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .options-container {
+        grid-template-columns: repeat(2, 1fr); /* Muestra 2 tarjetas por fila */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .options-container {
+        grid-template-columns: repeat(1, 1fr); /* Muestra 1 tarjeta por fila */
+    }
 }
 
 .tarjeta:hover {
@@ -32,12 +43,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .titulo {
     font-size: 1.5rem;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
 }
 
 .cuerpo {
@@ -46,11 +56,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2em;
+    font-size: 1.5rem; /* Reducimos el tamaño de fuente para el cuerpo */
 }
 
 .cuerpo img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 100%; /* Establece un ancho máximo del 100% para que las imágenes se ajusten al contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
     border-radius: 0.5rem;
 }

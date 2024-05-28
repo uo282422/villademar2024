@@ -195,6 +195,55 @@ function updateTotalPrice(productoTemp) {
     totalPriceElement.innerText = `Precio total: ${productoTemp.precio}€`;
 }
 
+async function addToCart(productoTemp) {
+    try {
+        const response = await fetch('/api/cart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(productoTemp)
+        });
+
+        if (response.ok) {
+            updateCartNotification();
+            crearMensaje('Agregado al carrito');
+            closeProduct();
+        } else {
+            crearMensaje('Error al agregar al carrito');
+        }
+    } catch (error) {
+        crearMensaje('Error de red al agregar al carrito');
+    }
+}
+
+async function updateCartNotification() {
+    try {
+        const response = await fetch('/api/cart');
+        const cart = await response.json();
+        document.getElementById('cartNotification').style.display = 'block';
+        document.getElementById('cartNotification').innerText = cart.length;
+    } catch (error) {
+        console.error('Error al actualizar la notificación del carrito', error);
+    }
+}
+
+function crearMensaje(text) {
+    const container = document.querySelector('.container');
+    const message = document.createElement('div');
+    message.style.display = 'flex';
+    message.style.top = '50%';
+    message.style.left = '50%';
+    message.style.transform = 'translate(-50%, -50%)';
+    message.classList.add('message');
+    message.textContent = text;
+
+    document.body.insertBefore(message, container);
+    setTimeout(() => {
+        message.remove();
+    }, 1000);
+}
+/*
 // Función para manejar el evento de hacer clic en el botón "Agregar al carrito"
 function addToCart(productoTemp) {
     
@@ -252,7 +301,7 @@ class Carrito {
             return new Carrito();
         }else return Carrito.instance;
     }
-}
+}*/
 
 class Producto {
     constructor(nombre, precio) {

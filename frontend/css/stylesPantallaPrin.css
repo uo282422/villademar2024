@@ -1,21 +1,20 @@
 /* PANTALLA PRIN */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .column {
     display: flex;
     align-items: center;
-    margin-bottom: 0.5em;
-    margin-right: 2em;
+    margin: 10px 0;
 }
-
 .column i {
-    margin-right: 0.5em;
-    margin-bottom: 1em;
+    margin-right: 10px;
 }
-
-.info-container {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    position: relative; /* Añade posición relativa para el posicionamiento absoluto del contenedor del botón */
+.column p {
+    margin: 0;
+    line-height: 1.5; /* Adjust this value if needed to perfectly align the text */
 }
 
 button {
@@ -50,6 +49,10 @@ button {
     width: 90%;
     max-width: none; /* Asegura que el ancho se extienda completamente */
     padding: 10px; /* Ajusta el relleno según sea necesario */
+}
+.persButton {
+    --color: #000000;
+    --hover: #6cd4ebbc;
 }
 
 /*

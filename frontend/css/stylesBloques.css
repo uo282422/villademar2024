@@ -5,12 +5,14 @@
     gap: 20px; /* Espacio entre los bloques */
 }
 
+
+
 .block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alinea los elementos al principio */
     border: 0.1rem solid lightgray;
-    box-shadow: 0.2rem 0.2rem 0.8rem 0.4rem rgba(211, 211, 211, 0.7);
+    /*box-shadow: 0.2rem 0.2rem 0.8rem 0.4rem rgba(211, 211, 211, 0.7);*/
     border-radius: 1rem;
     font-family: sans-serif;
     padding: 1rem; /* Añade padding para el contenido */
@@ -20,7 +22,7 @@
 
 @media screen and (max-width: 1200px) {
     .presentation-blocks {
-        grid-template-columns: repeat(2, 1fr); /* Muestra 2 columnas */
+        grid-template-columns: repeat(3, 1fr); /* Muestra 3 columnas */
     }
 }
 
@@ -30,20 +32,18 @@
     }
 }
 
-
-
 .block h2 {
     margin: 0;
     font-size: 2em;
-    color: #333; /* Mantén el color de texto actual */
+    color: #ffffff; /* Mantén el color de texto actual */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .block p {
-    margin: 0.5rem 0;
     font-size: 1.5rem;
-    color: #666; /* Mantén el color de texto actual */
+    color: #ffffff; /* Mantén el color de texto actual */
     text-align: center;
+    margin-top: 0; /* Asegura que no haya margen superior */
 }

@@ -2,34 +2,39 @@ let currentSlide = -1;
 const carouselSection = document.getElementById('carrPage');
 const buttonSection = document.getElementById('buttonPage');
 
-
 function showSlide(index) {
     carouselSection.style.display = 'flex';
-    
-
     const slides = document.querySelectorAll('.carousel-item');
+
     if (index >= slides.length) {
-        currentSlide = 0;
+        index = 0;
     } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        if(index === currentSlide){
-            carouselSection.style.display = 'none';
-            currentSlide = -1;
-        }else{
-            currentSlide = index;
-            carouselSection.style.backgroundImage = `url('/resources/images/fondo${currentSlide}.png')`;
-            const offset = -currentSlide * 100;
-            document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
-        
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[currentSlide].classList.add('active');
-            scrollToCarousel()
-        }
-        
+        index = slides.length - 1;
     }
 
-   
+    if (index === currentSlide) {
+        carouselSection.style.display = 'none';
+        currentSlide = -1;
+    } else {
+        currentSlide = index;
+        carouselSection.style.backgroundImage = `url('/resources/images/liso${currentSlide}.png')`;
+        const offset = -currentSlide * 100;
+        document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[currentSlide].classList.add('active');
+
+        adjustCarouselHeight(); // Adjust the height of the carousel
+        scrollToCarousel();
+    }
+}
+
+function adjustCarouselHeight() {
+    const activeSlide = document.querySelector('.carousel-item.active');
+    if (activeSlide) {
+        const height = activeSlide.offsetHeight;
+        document.querySelector('.carousel').style.height = `${height}px`;
+    }
 }
 
 function nextSlide() {
@@ -48,8 +53,13 @@ function hide() {
     }, 500); 
 }
 
-
+function goTop() {
+    const top = document.getElementById('mainPage');
+    top.scrollIntoView({ behavior: 'smooth' });
+}
 
 function scrollToCarousel() {
     carouselSection.scrollIntoView({ behavior: 'smooth' });
 }
+
+window.addEventListener('resize', adjustCarouselHeight); // Adjust on window resize

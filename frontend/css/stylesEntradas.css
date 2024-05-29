@@ -1,3 +1,4 @@
+/* Estilos existentes para las tarjetas */
 .options-container {
     margin: 5em auto; /* Centra horizontalmente y agrega margen superior e inferior */
     display: grid; /* Utiliza grid layout */
@@ -16,8 +17,6 @@
     border-radius: 1rem;
     font-family: sans-serif;
 }
-
-
 
 @media screen and (max-width: 992px) {
     .options-container {
@@ -63,5 +62,93 @@
     width: 100%;
     max-width: 100%; /* Establece un ancho máximo del 100% para que las imágenes se ajusten al contenedor */
     height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    border-radius: 0.5rem;
+}
+
+/*sección de Buses */
+.buses-container {
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.bus-line {
+    
+    border-radius: 1rem;
+    padding: 1em;
+    
+}
+
+.line-title {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+.bus-select {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.price-info {
+    font-size: 0.875rem;
+    color: #888;
+}
+
+/* sección de Beerpong */
+.input-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente el contenedor */
+    margin-bottom: 1em;
+}
+
+.beerpong-input {
+    width: 60%; /* Ajusta el ancho del input */
+    padding: 0.5em;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-right: 1em; /* Espacio entre el input y el botón */
+}
+
+.beerpong-button {
+    padding: 0.75em 1.5em;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff5733; /* Color de fondo del botón */
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.beerpong-button:hover {
+    background-color: #e74c3c; /* Color de fondo del botón al pasar el cursor */
+}
+
+
+.beerpong-container {
+    margin: 2em auto;
+    text-align: center;
+}
+
+.titulo-beerpong {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+.beerpong-price {
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+}
+
+.beerpong-bracket {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     border-radius: 0.5rem;
 }

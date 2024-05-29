@@ -1,0 +1,38 @@
+#slide2 img {
+    width: 70%;
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
+#slide2 .block p , #slide2 .block h2{
+    color: white;
+}
+
+.containerBeer {
+    margin: 5em auto; 
+    display: grid; /* Utiliza grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas */
+    gap: 1em; 
+    align-items: center; 
+}
+
+.containerBeer .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    
+}
+
+@media screen and (max-width: 992px) {
+    .containerBeer {
+        grid-template-columns: repeat(2, 1fr); /* Muestra 2 tarjetas por fila */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containerBeer {
+        grid-template-columns: repeat(1, 1fr); /* Muestra 1 tarjeta por fila */
+    }
+}

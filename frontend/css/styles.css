@@ -1,3 +1,6 @@
+/*PAGINAS PRINCIPALES*/
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -55,82 +58,6 @@ img {
     align-items: center;
     
 }
-
-/*PAGINAS PRINCIPALES*/
-#mainPage {
-    display: flex; 
-    background-image: url('/resources/images/cudi1.png');
-}
-
-#buttonPage {
-    display: flex; 
-    padding: 0%;
-    background-image: url('/resources/images/cudi2.png');
-}
-
-#carrPage {
-   /*display: flex; */
-   
-}
-
-
-
-
-
-
-
-.button-vertical-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-    
-}
-
-.colorButton {
-    flex: 1;
-    border: none;
-    color: BLACK;
-    font-size: 1.2em;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    transition: background-color 0.3s;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-}
-
-.colorButton:hover {
-    opacity: 0.8;
-}
-#button1,#button2,#button3,#button4{
-    margin-top:1em;
-    margin-bottom: 1em;
-}
-
-#button1 {
-    background-image: url('/resources/images/fondo0.png');
-}
-
-#button2 {
-    background-image: url('/resources/images/fondo1.png');
-}
-
-#button3 {
-    background-image: url('/resources/images/fondo2.png');
-}
-
-#button4 {
-    background-image: url('/resources/images/fondo3.png');
-}
-
-
-
 .carousel {
     position: relative;
     min-height: 100vh;

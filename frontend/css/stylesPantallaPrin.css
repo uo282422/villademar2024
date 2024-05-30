@@ -1,4 +1,9 @@
 /* PANTALLA PRIN */
+#mainPage {
+    display: flex; 
+    background-image: url('/resources/images/cudi1.png');
+}
+
 .info-container {
     display: flex;
     flex-direction: column;

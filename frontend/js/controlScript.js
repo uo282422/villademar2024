@@ -17,7 +17,7 @@ function showSlide(index) {
         currentSlide = -1;
     } else {
         currentSlide = index;
-        carouselSection.style.backgroundImage = `url('/resources/images/liso${currentSlide}.png')`;
+        carouselSection.style.backgroundImage = `url('/resources/images/liso${currentSlide}b.png')`;
         const offset = -currentSlide * 100;
         document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
 

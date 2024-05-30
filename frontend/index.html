@@ -8,21 +8,28 @@
     <script src="/js/controlScript.js" defer></script>
     <script src="/js/productScript.js" defer></script>
     <title>SplashParty2024</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/stylesBloques.css">
-    <link rel="stylesheet" href="/css/stylesEntradas.css">
-    <link rel="stylesheet" href="/css/stylesPopUps.css">
-    <link rel="stylesheet" href="/css/stylesCarrito.css">
     <link rel="stylesheet" href="/css/stylesHeader.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
     <link rel="stylesheet" href="/css/stylesPantallaPrin.css">
+    <link rel="stylesheet" href="/css/stylesBotones.css">
+    <link rel="stylesheet" href="/css/stylesInfo.css">
+    <link rel="stylesheet" href="/css/stylesEntradas.css">
     <link rel="stylesheet" href="/css/stylesBus.css">
     <link rel="stylesheet" href="/css/stylesBeer.css">
+
+    <link rel="stylesheet" href="/css/stylesPopUps.css">
+    <link rel="stylesheet" href="/css/stylesCarrito.css">
 </head>
 <body>
     <header class="header">
+        <div class="ticket" onclick="showSlide(1)">
+            <img src="/resources/images/ticketEntradas.png" alt="Entradas" class="ticketImg">
+        </div>
         <div class="button-like-text" onclick="goTop()">
             <img src="/resources/images/splashPartyLogo.png" alt="Splash Party Villademar2024 Logo" class="logo">
         </div>
+       
         <div class="cart-icon" onclick="openCart()">
             <i class="fas fa-shopping-cart"></i>
             <div id="cartNotification" class="cart-notification" style="display: none;">0</div>
@@ -47,7 +54,7 @@
                 <img src="/resources/images/splashPartyLogo.png">
             </div>
             <P></P>
-            <button class="persButtonBus" onclick="showSlide(1)">ENTRADAS</button>
+            <button class="persButtonBus" onclick="showSlide(1)">COMPRAR <BR><BR>ENTRADAS</button>
             <P></P>
             <div class="info-container">
                 <div class="column">

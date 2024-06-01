@@ -1,4 +1,3 @@
-
 function openCart() {
     const cart = Carrito.getInstance();
     const productCardsContainer = document.querySelector('.product-cards');
@@ -13,6 +12,7 @@ function openCart() {
     document.getElementById('total').textContent = precioTotal;
     document.getElementById('overlayCart').style.display = 'flex';
 }
+
 function crearTarjeta(product){
      const productCardsContainer = document.querySelector('.product-cards');
      const newProductCard = document.createElement('div');

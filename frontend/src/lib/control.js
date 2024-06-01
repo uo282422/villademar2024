@@ -10,10 +10,7 @@ window.addEventListener('resize', function() {
     }
 });
 document.addEventListener('DOMContentLoaded', () => {
-
     const carrito = new Carrito();
-
-
     const container = document.querySelector('.container');
 
     container.addEventListener('scroll', () => {

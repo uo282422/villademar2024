@@ -1,8 +1,8 @@
 # Dependencias npm instaladas
-/backend/node_modules
+**/node_modules
 
 # Directorio donde se almacenan los archivos de construcción
-/build
+**/build
 
 # Archivos de registro y salida
 *.log

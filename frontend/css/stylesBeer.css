@@ -1,38 +1,53 @@
 #slide2 img {
     width: 70%;
     height: auto;
-    display: block; 
-    margin: 0 auto; 
+    display: block;
+    margin: 0 auto;
 }
-#slide2 .block p , #slide2 .block h2{
+
+#slide2 .block p,
+#slide2 .block h2 {
     color: white;
 }
 
 .containerBeer {
-    margin: 5em auto; 
+    margin: 5em auto;
     display: grid; /* Utiliza grid layout */
     grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas */
-    gap: 1em; 
-    align-items: center; 
+    gap: 1em;
+    align-items: center;
 }
 
 .containerBeer .block {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 @media screen and (max-width: 992px) {
     .containerBeer {
-        grid-template-columns: repeat(2, 1fr); /* Muestra 2 tarjetas por fila */
+        grid-template-columns: repeat(2, 1fr); /* Muestra 2 columnas por fila */
     }
 }
 
 @media screen and (max-width: 768px) {
     .containerBeer {
-        grid-template-columns: repeat(1, 1fr); /* Muestra 1 tarjeta por fila */
+        grid-template-columns: repeat(1, 1fr); /* Muestra 1 columna por fila */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #slide2 img {
+        width: 100%; /* Ajusta el ancho de la imagen */
+    }
+
+    .containerBeer {
+        grid-template-columns: 1fr; /* Muestra 1 columna */
+    }
+
+    .containerBeer .block {
+        padding: 1em; /* Agrega padding para mejor espaciamiento */
     }
 }

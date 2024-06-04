@@ -15,6 +15,7 @@
 }
 #slide3 .block p{
     color: white;
+    font-size: large;
 }
 .presentationBusLines{
     margin: 5em auto; /* Centra horizontalmente y agrega margen superior e inferior */

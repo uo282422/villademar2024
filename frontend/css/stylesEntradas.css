@@ -59,13 +59,13 @@
 }
 
 .cuerpo img {
-    width: 100%;
-    max-width: 100%; /* Establece un ancho máximo del 100% para que las imágenes se ajusten al contenedor */
+    width: 80%;
+    max-width: 80%; /* Establece un ancho máximo del 100% para que las imágenes se ajusten al contenedor */
     height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
     border-radius: 0.5rem;
 }
 
-/*sección de Buses */
+/* sección de Buses */
 .buses-container {
     margin: 2em auto;
     display: grid;
@@ -75,10 +75,8 @@
 }
 
 .bus-line {
-    
     border-radius: 1rem;
     padding: 1em;
-    
 }
 
 .line-title {
@@ -130,7 +128,6 @@
     background-color: #e74c3c; /* Color de fondo del botón al pasar el cursor */
 }
 
-
 .beerpong-container {
     margin: 2em auto;
     text-align: center;
@@ -151,4 +148,31 @@
     max-width: 500px;
     height: auto;
     border-radius: 0.5rem;
+}
+
+/* Estilos responsivos adicionales */
+@media screen and (max-width: 600px) {
+    .options-container {
+        grid-template-columns: 1fr; /* Muestra 1 tarjeta por fila */
+    }
+
+    .buses-container {
+        grid-template-columns: 1fr; /* Muestra 1 columna de buses */
+    }
+
+    .bus-line {
+        padding: 0.5em;
+    }
+
+    .bus-select {
+        font-size: 0.875rem;
+    }
+
+    .beerpong-input {
+        width: 80%; /* Ajusta el ancho del input */
+    }
+
+    .beerpong-button {
+        padding: 0.5em 1em;
+    }
 }

@@ -78,7 +78,7 @@
         background-image: url('/resources/images/cuadrado3.png');
     }
 }
-@media (max-width: 435px) {
+@media (max-width: 645px) {
     .button-vertical-container {
         justify-content: center;
         flex-wrap: wrap;

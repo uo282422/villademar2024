@@ -23,9 +23,11 @@
 </head>
 <body>
     <header class="header">
+        <button class="buttonEntradas" onclick="showSlide(1)">COMPRAR ENTRADAS</button>
+            <!--
         <div class="ticket" onclick="showSlide(1)">
             <img src="/resources/images/ticketEntradas.png" alt="Entradas" class="ticketImg">
-        </div>
+        </div>-->
         <div class="button-like-text" onclick="goTop()">
             <img src="/resources/images/splashPartyLogo.png" alt="Splash Party Villademar2024 Logo" class="logo">
         </div>
@@ -260,29 +262,34 @@
                     </div>
                     
                     <div class="carousel-item active" id="slide2">
-                        <button class="fold-button" onclick="hide()"> <i class="fas fa-chevron-up"></i><br><i class="fas fa-chevron-up"></i></button>
+                        <button class="fold-button" onclick="hide()">
+                            <i class="fas fa-chevron-up"></i><br><i class="fas fa-chevron-up"></i>
+                        </button>
                         <h1>Beerpong</h1>
                         <div class="containerBeer">
                             <div class="block">
                                 <h2>Apuntarse</h2>
                                 <p>Se realizará un torneo de beerpong en el que participarán 64 parejas. La semifinal y la final serán retransmitidas en Twitch en directo en el canal de Gazir</p>
-                                
                             </div>
-                            
-                            <img src="/resources/images/reglas.png" alt="reglas">
-                            
-                            <img src="/resources/images/braquets.png" alt="braquets">
+                            <div class="image-container">
+                                <img src="/resources/images/reglas.png" alt="reglas">
+                            </div>
                             <div class="block">
-                                
                                 <h2>Premios</h2>
                                 <p>1º 250€ + Trofeo<br>
-                                    2º 50€ + Camisetas<br>
-                                    3º 10€ + 2 Tiradas ruleta<br>
-                                    4º 2 Tiradas ruleta</p>
+                                   2º 50€ + Camisetas<br>
+                                   3º 10€ + 2 Tiradas ruleta<br>
+                                   4º 2 Tiradas ruleta</p>
                             </div>
-                            
+                            <div class="image-container">
+                                <img src="/resources/images/braquets.png" alt="braquets">
+                            </div>
                         </div>
                     </div>
+                    
+                    
+                    
+                    
                     <div class="carousel-item active" id="slide3">
                         <button class="fold-button" onclick="hide()"> <i class="fas fa-chevron-up"></i><br><i class="fas fa-chevron-up"></i></button>
                         <h1>Autobuses</h1>

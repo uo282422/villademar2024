@@ -21,12 +21,21 @@
     left: 50%; /* Posiciona el centro del logo en el 50% */
     transform: translateX(-50%); /* Centra el logo */
 }
-.ticket {
+
+.ticket, .buttonEntradas {
     pointer-events: auto; /* Habilita los clics solo en este elemento */
     cursor: pointer; /* Añade el cursor de puntero */
     position: absolute; /* Permite el posicionamiento absoluto */
     left: 5em; /* Posiciona el ticket */
     transform: translateX(-50%); /* Centra el ticket */
+}
+.ticket{
+    left: 5em; /* Posiciona el ticket */
+
+}
+.buttonEntradas{
+    left: 8em; /* Posiciona el ticket */
+
 }
 
 .logo {

@@ -1,5 +1,5 @@
 #slide2 img {
-    width: 70%;
+    max-width: 70%; /* Mantiene las imágenes más pequeñas */
     height: auto;
     display: block;
     margin: 0 auto;
@@ -26,6 +26,18 @@
     text-align: center;
 }
 
+.containerBeer .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBeer .image-container img {
+    width: auto;
+    max-width: 70%; /* Mantiene las imágenes más pequeñas */
+    height: auto;
+}
+
 @media screen and (max-width: 992px) {
     .containerBeer {
         grid-template-columns: repeat(2, 1fr); /* Muestra 2 columnas por fila */
@@ -40,7 +52,7 @@
 
 @media screen and (max-width: 600px) {
     #slide2 img {
-        width: 100%; /* Ajusta el ancho de la imagen */
+        max-width: 100%; /* Ajusta el ancho de la imagen */
     }
 
     .containerBeer {

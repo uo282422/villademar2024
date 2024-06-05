@@ -1,3 +1,6 @@
+/*PAGINAS PRINCIPALES*/
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -6,48 +9,10 @@ html, body {
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
-img{
+img {
     width: 100%;
-  height: auto;
-}
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 0 20px; /* Ajuste del padding para que el contenido no se pegue a los bordes */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: center; /* Centra el contenido principal horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos */
-}
-
-.button-like-text {
-    pointer-events: auto; /* Habilita los clics solo en este elemento */
-    cursor: pointer; /* Añade el cursor de puntero */
-    position: absolute; /* Permite el posicionamiento absoluto */
-    left: 50%; /* Posiciona el centro del logo en el 50% */
-    transform: translateX(-50%); /* Centra el logo */
-}
-
-.logo {
-    max-height: 50px; /* Ajusta según tu diseño */
     height: auto;
 }
-
-.cart-icon {
-    font-size: 24px; /* Tamaño del icono */
-    color: #fff; /* Color claro */
-    cursor: pointer;
-    position: absolute; /* Permite el posicionamiento absoluto */
-    right: 2em; /* Separa el icono del borde derecho */
-    pointer-events: auto; /* Habilita los clics solo en este elemento */
-}
-
 
 
 .container {
@@ -56,9 +21,10 @@ img{
     height: 100vh;
 }
 
+/*AJUSTES DE LAS SECCIONES EN GENERAL*/
 .section {
     min-height: 100vh; /* Ocupa al menos la altura de la ventana */
-    display: flex;
+    display: none; /* Ocultar todas las secciones inicialmente */
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
@@ -84,382 +50,66 @@ img{
     z-index: 2;
 }
 
-#section1, #section2, #section3, #section4, #section5 {
+#mainPage, #buttonPage, #carrPage, #slide0, #slide1,#slide2,#slide3 {
     background-size: cover;
     background-position: center;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
-
-#section1 {
-    background-image: url('/resources/images/cudi1.png');
-}
-
-#section2 {
-    background-image: url('/resources/images/cudi2.png');
-}
-
-#section3 {
-    background-image: url('/resources/images/entradas.png');
-}
-
-#section4 {
-    background-image: url('/resources/images/bus.png');
-}
-
-#section5 {
-    background-image: url('/resources/images/beer.png');
-}
-
-.button-container button, .downButton {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.persButton:hover,
-.persButton:focus {
-  box-shadow: inset 0 -3.25em 0 0 var(--hover);
-}
-
-.persButton {
-    --color: #e4cb58;
-    --hover: #6cd4ebbc;
-}
-
-button {
-    background: none;
-    border: 2px solid;
-    color: white;
-    font: inherit;
-    line-height: 1;
-    padding: 1em 2em;
-    border-radius: 10px;
-    transition: 0.7s;
-}
-
-.downButton {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1em;
-    color: #fff;
-    text-decoration: none;
-}
-
-.downButton:hover {
-    color: #eee;
-}
-
-.info-container {
-    display: flex;
-    flex-direction: row;
-    color: white;
-}
-
-.column {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5em;
-    margin-right: 2em;
-}
-
-.column i {
-    margin-right: 0.5em;
-    margin-bottom: 1em;
-}
-.options-container {
-    /*width: 80%;  Establece el ancho del contenedor de opciones */
-    margin: 5em auto; /* Centra horizontalmente y agrega margen superior e inferior */
-    display: grid; /* Utiliza grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas de igual ancho */
-    grid-template-rows: auto; /* Ajusta la altura según el contenido */
-    gap: 20px; /* Espacio entre las opciones */
-}
-
-.tarjeta {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.carousel {
+    position: relative;
+    min-height: 100vh;
     width: 100%;
-    max-width: 30rem;
-    border: 0.1rem solid lightgray;
-    box-shadow: 0.2rem 0.2rem 0.8rem 0.4rem rgba(211, 211, 211, 0.7);
-    border-radius: 1rem;
-    font-family: sans-serif;
-    margin: 1rem;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
-.tarjeta:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: auto; /* Ensure height adjusts automatically */
 }
 
-.tarjeta h2 {
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    text-align: center;
+}
+
+
+
+.carousel-item h2 {
     margin: 0;
-    font-size: 2em;
-    color: #fff;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    font-size: 24px;
 }
 
-.titulo {
-    font-size: 1.5rem;
-    padding: 1rem 1rem 0 1rem;
-}
-
-.cuerpo {
-    padding: 1rem;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2em;
-}
-
-.cuerpo img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-}
-
-
-
-/*Bloques de info*/
-
-.presentation-blocks {
-    margin: 5em auto;
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: auto;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.block {
-    background-color: rgba(54, 54, 54, 0.348);
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #ccc; /* Añadido borde fino */
-}
-
-.map-container {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* Proporción 16:9 */
-}
-
-.map-container iframe {
+.carousel-control {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.block img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-
-.overlayCart {
-    display: none;  
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1001;
-    justify-content: center;
-    align-items: center;
-    overflow: auto; /* Permitir desplazamiento vertical */
-}
-.overlayProduct {
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1001;
-    justify-content: center;
-    align-items: center;
-    overflow: auto; /* Permitir desplazamiento vertical */
-}
-
-.popup {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px; /* Aumenté el ancho máximo para acomodar el diseño */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    color: #333; /* Color del texto */
-    display: flex;
-    flex-direction: column;
-}
-
-.popup h2 {
-    margin-top: 0;
-}
-
-.popup .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.popup .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
+    top: 25%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
-    border-radius: 5px;
+    font-size: 24px;
     cursor: pointer;
-    text-align: center;
-    margin-top: 20px;
+    padding: 0.5em;;
 }
 
-.popup .btn:hover {
-    background-color: #0056b3;
+.carousel-control.prev {
+    left: 0.5em;
 }
 
-.product-cards {
-    max-height: 300px; /* Altura máxima para permitir el desplazamiento vertical */
-    overflow-y: auto; /* Permitir desplazamiento vertical */
-}
-
-.product-card {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px 0; /* Espaciado entre las tarjetas */
-}
-
-.product-card h3 {
-    margin-top: 0; /* Eliminar el margen superior del título */
-}
-
-.product-card p {
-    margin: 5px 0; /* Espaciado entre los elementos de la tarjeta */
-}
-
-.checkout {
-    margin-top: auto; /* Mueve el checkout al final del popup */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.checkout .total {
-    font-weight: bold;
-}
-
-.checkout .btn {
-    display: flex;
-    align-items: center;
+.carousel-control.next {
+    right: 0.5em;
 }
 
 
 
-.popup {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    color: #333; /* Color del texto */
-}
-
-.units {
-    display: flex;
-    align-items: center;
-}
-
-.btn-unit {
-    width: inherit; /* Hacer los botones cuadrados */
-    height: inherit; /* Hacer los botones cuadrados */
-    display: flex; /* Usar flexbox */
-    justify-content: center; /* Centrar contenido horizontalmente */
-    align-items: center; /* Centrar contenido verticalmente */
-    color: #007bff;
-    
-}
-
-.unit-count {
-    margin: 0 5px; /* Espacio entre los botones y el contador */
-}
-
-.btn-add-to-cart {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    display: block;
-    text-align: center;
-}
-
-.btn-add-to-cart:hover {
-    background-color: #218838;
-}
 
 
-  .message {
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1001;
-    justify-content: center;
-    align-items: center;
-    overflow: auto; /* Permitir desplazamiento vertical */
-}
 
-.cart-notification {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    line-height: 20px; /* Ajuste para centrar verticalmente */
-    text-align: center; /* Ajuste para centrar horizontalmente */
-}

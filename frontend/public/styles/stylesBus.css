@@ -1,0 +1,41 @@
+#imgBus{
+    width: 60%;
+    height: auto;
+    border-radius: 1.5em;
+    border: 1px solid #ccc;
+}
+
+#slide3 .block{
+    
+    margin-top: 1em;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#slide3 .block p{
+    color: white;
+    font-size: large;
+}
+.presentationBusLines{
+    margin: 5em auto; /* Centra horizontalmente y agrega margen superior e inferior */
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1em;
+}
+.presentationBusLines img{
+    width: 100%;
+    height: auto;
+    
+}
+@media screen and (max-width: 1200px) {
+    .presentationBusLines {
+        grid-template-columns: repeat(2, 1fr); /* Muestra 4 columnas */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .presentationBusLines {
+        grid-template-columns: repeat(1, 1fr); /* Muestra 4 columna */
+    }
+}

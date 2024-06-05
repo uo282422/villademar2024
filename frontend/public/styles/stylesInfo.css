@@ -1,0 +1,72 @@
+.presentation-blocks {
+    margin: 5em auto; /* Centra horizontalmente y agrega margen superior e inferior */
+    display: grid; /* Utiliza grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Inicialmente 3 columnas */
+    gap: 20px; /* Espacio entre los bloques */
+    max-width: 100%; /* Asegura que el contenedor no se desborde */
+    padding: 0 10px; /* Añade un pequeño padding para evitar que se pegue a los bordes */
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos al principio */
+    border: 0.1rem solid lightgray;
+    /*box-shadow: 0.2rem 0.2rem 0.8rem 0.4rem rgba(211, 211, 211, 0.7);*/
+    border-radius: 1rem;
+    font-family: sans-serif;
+    padding: 1rem; /* Añade padding para el contenido */
+    background-color: #ffffff6b; /* Mantén el color de fondo actual */
+    box-sizing: border-box; /* Asegura que el padding y borde se incluyan en el ancho y alto total */
+}
+
+@media screen and (max-width: 1200px) {
+    .presentation-blocks {
+        grid-template-columns: repeat(2, 1fr); /* Muestra 2 columnas */
+    }
+    .block h2 {
+        font-size: 1em;
+    }
+    .block p {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .presentation-blocks {
+        grid-template-columns: repeat(1, 1fr); /* Muestra 1 columna */
+    }
+    .block h2 {
+        font-size: 0.7em;
+    }
+    .block p {
+        font-size: 0.5rem;
+    }
+    
+}
+@media screen and (max-width: 414px) {
+    
+    
+
+}
+
+.block h2 {
+    margin: 0;
+    font-size: 1.25em;
+    color: #ffffff; /* Mantén el color de texto actual */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block p {
+    font-size: 0.75rem;
+    color: #ffffff; /* Mantén el color de texto actual */
+    text-align: center;
+    margin-top: 0; /* Asegura que no haya margen superior */
+}
+
+.iframe{
+    width: 5%;
+    height: auto;
+}
